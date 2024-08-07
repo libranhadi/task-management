@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "47eed6fc-b69c-4926-be1e-564b5dabbcd7",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13665306",
+		"_collection_link": "https://speeding-meteor-3925.postman.co/workspace/My-Workspace~4b55f9b2-cfdf-4494-8744-dc8d6b0fa2cb/collection/13665306-47eed6fc-b69c-4926-be1e-564b5dabbcd7?action=share&source=collection_link&creator=13665306"
+	},
+	"item": [
+		{
+			"name": "Task CRUD",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Task\",\n  \"description\": \"Task For DELEte\",\n  \"start_date\": \"2024-08-01\",\n  \"end_date\": \"2024-09-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/tasks/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/tasks/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload File",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_upload",
+									"type": "file",
+									"src": "/Users/libranhadi/Downloads/albert.jpeg"
+								}
+							]
+						},
+						"url": "http://localhost:8080/file-management/upload"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/file-management/files"
+					},
+					"response": []
+				},
+				{
+					"name": "File Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/file-management/files/albert_20240807105359.jpeg"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\" : \"test@gmail.com\",\n  \"password\" : \"secret\",\n  \"name\" : \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\" : \"test@gmail.com\",\n  \"password\" : \"secret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIn0.1b0-y9AbITaxN-qB-1SZjyIfzboc3Y0HqyGrG8CC4zU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/profile"
+			},
+			"response": []
+		}
+	]
+}
